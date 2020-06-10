@@ -1,11 +1,13 @@
 function fizzBuzz(number) {
-    if(number % 3 === 0 && number % 5 === 0)
+    const divibleBy = (divider, number) => number % divider === 0;
+
+    if(divibleBy(15, number))
         return 'fizzbuzz';
 
-    if(number % 3 === 0)
+    if(divibleBy(3, number))
         return 'fizz';
 
-    if(number % 5 === 0)
+    if(divibleBy(5, number))
         return 'buzz';
 
     return number;
